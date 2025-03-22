@@ -38,50 +38,41 @@ The dataset is loaded into R as a transaction object, groceries, using the read.
 To refine the model, association rules are sorted based on lift and confidence to highlight the most meaningful patterns. Subsets of rules related to specific items are also explored for more targeted insights.
 
 ## 📊 Insights
-1. Most Frequent Items
+### 1. Most Frequent Items
 Based on the dataset's frequent item counts, the most purchased items include:
 
-Whole milk (2513 transactions)
+- Whole milk (2513 transactions)
 
-Other vegetables (1903 transactions)
+- Other vegetables (1903 transactions)
 
-Rolls/buns (1809 transactions)
+- Rolls/buns (1809 transactions)
 
-Soda (1715 transactions)
+- Soda (1715 transactions)
 
 These items are key indicators of what customers typically purchase, providing a foundation for understanding common purchasing patterns.
 
-2. Transaction Characteristics
-Single-item transactions: 2,159 transactions contained only one item.
+### 2. Transaction Characteristics
+- **Single-item transactions:** 2,159 transactions contained only one item.
 
-Multi-item transactions: The maximum number of items in a transaction was 32, with the average being 4.4 items.
+- **Multi-item transactions:** The maximum number of items in a transaction was 32, with the average being 4.4 items.
 
-Visualization: The distribution of transaction lengths is visualized using histograms, revealing a typical range of 2-4 items per transaction.
-
-3. Association Rules with High Lift
+### 3. Association Rules with High Lift
 After applying the Apriori algorithm, a few notable association rules emerged:
 
-{herbs} => {root vegetables}: Customers who purchase herbs are nearly 4 times more likely to also purchase root vegetables (Lift = 3.96).
+- {herbs} => {root vegetables}: Customers who purchase herbs are nearly 4 times more likely to also purchase root vegetables (Lift = 3.96).
 
-{berries} => {whipped/sour cream}: Berries are frequently bought with whipped/sour cream, suggesting a potential pairing for desserts (Lift = 3.79).
+- {berries} => {whipped/sour cream}: Berries are frequently bought with whipped/sour cream, suggesting a potential pairing for desserts (Lift = 3.79).
 
-These rules provide actionable insights for improving product placement, promotions, or bundled offers in the store.
+These rules provide **actionable insights** for improving **product placement, promotions, or bundled offers** in the store.
 
-4. Insights from Specific Itemsets
-By focusing on specific items, such as berries, the following insights were discovered:
-
-{berries} => {whipped/sour cream}: A strong association suggests that marketing or promotions can target customers who buy berries to also consider whipped/sour cream, a pairing suitable for desserts.
-
-{berries} => {yogurt}: Berries are also commonly purchased alongside yogurt, indicating a frequent combination for breakfast or lunch (Lift = 2.28).
-
-5. Rule Evaluation: Actionable, Trivial, and Inexplicable Rules
+### 4. Rule Evaluation: Actionable, Trivial, and Inexplicable Rules
 By examining the generated association rules, they can be categorized as follows:
 
-Actionable: Rules that reveal meaningful and relevant insights, such as the association between berries and whipped cream.
+* **Actionable:** Rules that reveal meaningful and relevant insights, such as the association between berries and whipped cream.
 
-Trivial: Rules that are logical but not particularly useful, e.g., {whole milk} => {whole milk}.
+* **Trivial:** Rules that are logical but not particularly useful, e.g., {whole milk} => {whole milk}.
 
-Inexplicable: Rules that lack a clear reason for the association, such as {potted plants} => {whole milk}.
+* **Inexplicable:** Rules that lack a clear reason for the association, such as {potted plants} => {whole milk}.
 
 These categories help prioritize the most useful rules for real-world applications.
 
