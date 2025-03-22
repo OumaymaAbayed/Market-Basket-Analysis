@@ -1,4 +1,5 @@
 #Market Basket Analysis in R
+
 ##📌 Project Overview
 This project performs Market Basket Analysis using the Apriori algorithm to uncover product associations from transaction data. The dataset was obtained from Kaggle and includes transaction records from a grocery store, providing valuable insights into customer purchasing behaviors.
 
