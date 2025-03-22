@@ -9,11 +9,8 @@ groceries.csv: A dataset containing transaction details of groceries purchased b
 ## 📊 Methodology
 1. Loading The Necessary Libraries
 The following libraries are used in this project to perform Market Basket Analysis:
-
 arules: for generating and handling association rules.
-
 arulesViz: for visualizing the rules.
-
 readr: for reading the dataset.
 
 2. Loading The Dataset
@@ -21,11 +18,8 @@ The dataset is loaded into R as a transaction object, groceries, using the read.
 
 3. Apply the Apriori Algorithm
 The Apriori algorithm is applied to the dataset to extract association rules with the following parameters:
-
 Support: Minimum frequency of itemsets in the dataset.
-
 Confidence: Conditional probability of finding item B given that item A is present.
-
 Minlen: Minimum length of itemsets.
 
 4. Evaluate Model Performance
