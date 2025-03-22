@@ -9,27 +9,30 @@ groceries.csv: A dataset containing transaction details of groceries purchased b
 ## 📊 Methodology
 1. Loading The Necessary Libraries
 The following libraries are used in this project to perform Market Basket Analysis:
-arules: for generating and handling association rules.
-arulesViz: for visualizing the rules.
-readr: for reading the dataset.
+  arules: for generating and handling association rules.
+  arulesViz: for visualizing the rules.
+  readr: for reading the dataset.
 
 2. Loading The Dataset
 The dataset is loaded into R as a transaction object, groceries, using the read.transactions() function. The dataset contains 9,835 transactions and 169 unique items.
 
 3. Apply the Apriori Algorithm
-The Apriori algorithm is applied to the dataset to extract association rules with the following parameters:
-Support: Minimum frequency of itemsets in the dataset.
-Confidence: Conditional probability of finding item B given that item A is present.
-Minlen: Minimum length of itemsets.
+  The Apriori algorithm is applied to the dataset to extract association rules with the following parameters:
 
-4. Evaluate Model Performance
-The model’s performance is evaluated using the following metrics:
+  Support: Minimum frequency of itemsets in the dataset.
 
-Support: Indicates how frequently an itemset appears in the dataset.
+  Confidence: Conditional probability of finding item B given that item A is present.
 
-Confidence: Represents the likelihood of finding item B when item A is purchased.
+  Minlen: Minimum length of itemsets.
 
-Lift: A measure of how much more likely one item is to be purchased relative to its typical purchase rate, given another item is purchased.
+5. Evaluate Model Performance
+  The model’s performance is evaluated using the following metrics:
+
+  Support: Indicates how frequently an itemset appears in the dataset.
+
+  Confidence: Represents the likelihood of finding item B when item A is purchased.
+
+  Lift: A measure of how much more likely one item is to be purchased relative to its typical purchase rate, given another item is purchased.
 
 5. Improve Model Performance
 To refine the model, association rules are sorted based on lift and confidence to highlight the most meaningful patterns. Subsets of rules related to specific items are also explored for more targeted insights.
